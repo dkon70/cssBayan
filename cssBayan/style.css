@@ -36,25 +36,14 @@ h1 {
     flex-direction: column;
 }
 
-.acc-menu:hover .item-title:nth-child(1) {
+.acc-menu:hover .item-title {
     color: black;
 }
 
-.acc-menu:hover .item-title:nth-child(2) {
-    color: black;
+.acc-menu:hover .plus {
+    display: block;
 }
 
-.acc-menu:hover .item-title:nth-child(3) {
-    color: black;
-}
-
-.acc-menu:hover .item-title:nth-child(4) {
-    color: black;
-}
-
-.acc-menu:hover .item-title:nth-child(5) {
-    color: black;
-}
 
 .acc-item {
     display: flex;
@@ -64,12 +53,30 @@ h1 {
     width: 100%;
 }
 
+.acc-item:hover .plus {
+    display: none;
+}
+
+.acc-item:hover .close {
+    display: block;
+}
+
 .item-input {
     width: 0;
     height: 0;
 }
 
+.plus {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
 .item-title {
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
     cursor: pointer;
     color: #0000FF;
@@ -79,11 +86,12 @@ h1 {
     display: none;
 }
 
-.item-title:hover {
-    color: black;
+.item-title:hover ~ .acc-content {
+    display: flex;
+    justify-content: center;
 }
 
-.item-title:hover ~ .acc-content {
+.item-input:checked ~ .acc-content {
     display: flex;
     justify-content: center;
 }
