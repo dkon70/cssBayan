@@ -1,0 +1,89 @@
+.acc-menu {
+    display: flex;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3,
+p,
+label {
+    font-family: 'Inter', sans-serif;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid rgb(225, 225, 225);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.acc-menu {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.acc-menu:hover .item-title:nth-child(1) {
+    color: black;
+}
+
+.acc-menu:hover .item-title:nth-child(2) {
+    color: black;
+}
+
+.acc-menu:hover .item-title:nth-child(3) {
+    color: black;
+}
+
+.acc-menu:hover .item-title:nth-child(4) {
+    color: black;
+}
+
+.acc-menu:hover .item-title:nth-child(5) {
+    color: black;
+}
+
+.acc-item {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-bottom: 2px solid rgb(225, 225, 225);
+    width: 100%;
+}
+
+.item-input {
+    width: 0;
+    height: 0;
+}
+
+.item-title {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #0000FF;
+}
+
+.acc-content {
+    display: none;
+}
+
+.item-title:hover {
+    color: black;
+}
+
+.item-title:hover ~ .acc-content {
+    display: flex;
+    justify-content: center;
+}
