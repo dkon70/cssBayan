@@ -1,3 +1,8 @@
+html {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
 .acc-menu {
     display: flex;
     justify-content: center;
@@ -36,15 +41,6 @@ h1 {
     flex-direction: column;
 }
 
-.acc-menu:hover .item-title {
-    color: black;
-}
-
-.acc-menu:hover .plus {
-    display: block;
-}
-
-
 .acc-item {
     display: flex;
     justify-content: flex-start;
@@ -53,45 +49,60 @@ h1 {
     width: 100%;
 }
 
-.acc-item:hover .plus {
-    display: none;
-}
-
-.acc-item:hover .close {
-    display: block;
-}
-
 .item-input {
     width: 0;
     height: 0;
 }
 
-.plus {
-    display: none;
-}
-
-.close {
-    display: none;
-}
-
 .item-title {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 0;
     cursor: pointer;
-    color: #0000FF;
+    color: #000000;
 }
 
 .acc-content {
     display: none;
 }
 
-.item-title:hover ~ .acc-content {
+.item-input:checked ~ .acc-content {
     display: flex;
     justify-content: center;
 }
 
-.item-input:checked ~ .acc-content {
-    display: flex;
-    justify-content: center;
+.item-input:checked ~ .item-title .plus {
+    transform: rotate(45deg) !important;
+}
+
+@media screen and (min-width: 1024px) {
+    .plus {
+        display: none;
+    }
+
+    .item-title {
+        color: #0000FF;
+    }
+
+    .item-title:hover ~ .acc-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .acc-item:hover .plus {
+        transform: rotate(45deg);
+    }
+
+    .item-title:hover ~ .acc-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .acc-menu:hover .item-title {
+        color: black;
+    }
+    
+    .acc-menu:hover .plus {
+        display: block;
+    }
 }
