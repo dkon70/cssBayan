@@ -98,7 +98,12 @@ h1 {
         margin-bottom: 1em;
     }
 
-    .acc-content:hover {
+    .acc-item:hover {
+        cursor: pointer;
+    }
+    
+    .acc-item:hover > .acc-content {
+        cursor: pointer;
         width: 70%;
         max-height: 100%;
         margin-bottom: 1em;
